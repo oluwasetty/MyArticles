@@ -14,6 +14,20 @@ class ArticleTagController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    /**
+     * @OA\Get(
+     *      path="/articles/{id}/tags",
+     *      operationId="getArticlesTagList",
+     *      tags={"Articles"},
+     *      summary="Get list of articles",
+     *      description="Returns list of articles",
+     *      @OA\Response(
+     *          response=200,
+     *          description="Successful operation",
+     *       )
+     *     )
+     */
     public function index($id)
     {
         // returns all article_tags
@@ -37,6 +51,20 @@ class ArticleTagController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+    /**
+     * @OA\Post(
+     *      path="/articles/{id}/tags",
+     *      operationId="postArticleTag",
+     *      tags={"Articles"},
+     *      summary="post an article tag",
+     *      description="post an article tag",
+     *      @OA\Response(
+     *          response=200,
+     *          description="Successful operation",
+     *       )
+     *     )
+     */
     public function store(ArticleTagRequest $request, $id)
     {
         // creates artcles
@@ -49,6 +77,20 @@ class ArticleTagController extends Controller
      *
      * @param  \App\Models\ArticleTag  $article_tag
      * @return \Illuminate\Http\Response
+     */
+
+    /**
+     * @OA\Get(
+     *      path="/articles/{id}/tags/{id}",
+     *      operationId="getoneArticleTag",
+     *      tags={"Articles"},
+     *      summary="get an article tag",
+     *      description="get an article tag",
+     *      @OA\Response(
+     *          response=200,
+     *          description="Successful operation",
+     *       )
+     *     )
      */
     public function show($id)
     {
@@ -79,6 +121,20 @@ class ArticleTagController extends Controller
      * @param  \App\Models\ArticleTag  $article_tag
      * @return \Illuminate\Http\Response
      */
+
+    /**
+     * @OA\Put(
+     *      path="/articles/{id}/tags/{id}",
+     *      operationId="updateArticleTag",
+     *      tags={"Articles"},
+     *      summary="update an article tag",
+     *      description="update an article tag",
+     *      @OA\Response(
+     *          response=200,
+     *          description="Successful operation",
+     *       )
+     *     )
+     */
     public function update(Request $request, $id)
     {
         // update article_tags
@@ -97,6 +153,20 @@ class ArticleTagController extends Controller
      *
      * @param  \App\Models\ArticleTag  $article_tag
      * @return \Illuminate\Http\Response
+     */
+
+    /**
+     * @OA\Delete(
+     *      path="/articles/{id}/tags/{id}",
+     *      operationId="deleteArticleTag",
+     *      tags={"Articles"},
+     *      summary="delete an article tag",
+     *      description="delete an article tag",
+     *      @OA\Response(
+     *          response=200,
+     *          description="Successful operation",
+     *       )
+     *     )
      */
     public function destroy($id)
     {

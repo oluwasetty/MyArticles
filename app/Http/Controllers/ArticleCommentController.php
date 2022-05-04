@@ -14,6 +14,20 @@ class ArticleCommentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    /**
+     * @OA\Get(
+     *      path="/articles/{id}/comments",
+     *      operationId="getArticlesCommentList",
+     *      tags={"Articles"},
+     *      summary="Get list of articles",
+     *      description="Returns list of articles",
+     *      @OA\Response(
+     *          response=200,
+     *          description="Successful operation",
+     *       )
+     *     )
+     */
     public function index($id)
     {
         // returns all article_comments
@@ -37,6 +51,20 @@ class ArticleCommentController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+    /**
+     * @OA\Post(
+     *      path="/articles/{id}/comments",
+     *      operationId="postArticleComment",
+     *      tags={"Articles"},
+     *      summary="post an article comment",
+     *      description="post an article comment",
+     *      @OA\Response(
+     *          response=200,
+     *          description="Successful operation",
+     *       )
+     *     )
+     */
     public function store(ArticleCommentRequest $request, $id)
     {
         // creates artcles
@@ -49,6 +77,20 @@ class ArticleCommentController extends Controller
      *
      * @param  \App\Models\ArticleComment  $article_comment
      * @return \Illuminate\Http\Response
+     */
+
+    /**
+     * @OA\Get(
+     *      path="/articles/{id}/comments/{id}",
+     *      operationId="getoneArticleComment",
+     *      tags={"Articles"},
+     *      summary="get an article comment",
+     *      description="get an article comment",
+     *      @OA\Response(
+     *          response=200,
+     *          description="Successful operation",
+     *       )
+     *     )
      */
     public function show($id)
     {
@@ -79,6 +121,20 @@ class ArticleCommentController extends Controller
      * @param  \App\Models\ArticleComment  $article_comment
      * @return \Illuminate\Http\Response
      */
+
+    /**
+     * @OA\Put(
+     *      path="/articles/{id}/comments/{id}",
+     *      operationId="updateArticleComment",
+     *      tags={"Articles"},
+     *      summary="update an article comment",
+     *      description="update an article comment",
+     *      @OA\Response(
+     *          response=200,
+     *          description="Successful operation",
+     *       )
+     *     )
+     */
     public function update(Request $request, $id)
     {
         // update article_comments
@@ -97,6 +153,20 @@ class ArticleCommentController extends Controller
      *
      * @param  \App\Models\ArticleComment  $article_comment
      * @return \Illuminate\Http\Response
+     */
+
+    /**
+     * @OA\Delete(
+     *      path="/articles/{id}/comments/{id}",
+     *      operationId="deleteArticleComment",
+     *      tags={"Articles"},
+     *      summary="delete an article comment",
+     *      description="delete an article comment",
+     *      @OA\Response(
+     *          response=200,
+     *          description="Successful operation",
+     *       )
+     *     )
      */
     public function destroy($id)
     {

@@ -1,0 +1,292 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "My Articles",
+        "description": "My Articles Description",
+        "contact": {
+            "email": "taiwo_soewu.1995@ymail.com"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://127.0.0.1:8000/api/",
+            "description": "Demo API Server"
+        }
+    ],
+    "paths": {
+        "/articles/{id}/comments": {
+            "get": {
+                "tags": [
+                    "Articles"
+                ],
+                "summary": "Get list of articles",
+                "description": "Returns list of articles",
+                "operationId": "getArticlesCommentList",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Articles"
+                ],
+                "summary": "post an article comment",
+                "description": "post an article comment",
+                "operationId": "postArticleComment",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/articles/{id}/comments/{id}": {
+            "get": {
+                "tags": [
+                    "Articles"
+                ],
+                "summary": "get an article comment",
+                "description": "get an article comment",
+                "operationId": "getoneArticleComment",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Articles"
+                ],
+                "summary": "update an article comment",
+                "description": "update an article comment",
+                "operationId": "updateArticleComment",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Articles"
+                ],
+                "summary": "delete an article comment",
+                "description": "delete an article comment",
+                "operationId": "deleteArticleComment",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/articles": {
+            "get": {
+                "tags": [
+                    "Articles"
+                ],
+                "summary": "Get list of articles",
+                "description": "Returns list of articles",
+                "operationId": "getArticlesList",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Articles"
+                ],
+                "summary": "post an article",
+                "description": "post an article",
+                "operationId": "postArticle",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/articles/{id}": {
+            "get": {
+                "tags": [
+                    "Articles"
+                ],
+                "summary": "get an article",
+                "description": "get an article",
+                "operationId": "getoneArticle",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Articles"
+                ],
+                "summary": "update an article",
+                "description": "update an article",
+                "operationId": "updateArticle",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Articles"
+                ],
+                "summary": "delete an article",
+                "description": "delete an article",
+                "operationId": "deleteArticle",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/articles/{id}/tags": {
+            "get": {
+                "tags": [
+                    "Articles"
+                ],
+                "summary": "Get list of articles",
+                "description": "Returns list of articles",
+                "operationId": "getArticlesTagList",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Articles"
+                ],
+                "summary": "post an article tag",
+                "description": "post an article tag",
+                "operationId": "postArticleTag",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/articles/{id}/tags/{id}": {
+            "get": {
+                "tags": [
+                    "Articles"
+                ],
+                "summary": "get an article tag",
+                "description": "get an article tag",
+                "operationId": "getoneArticleTag",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Articles"
+                ],
+                "summary": "update an article tag",
+                "description": "update an article tag",
+                "operationId": "updateArticleTag",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Articles"
+                ],
+                "summary": "delete an article tag",
+                "description": "delete an article tag",
+                "operationId": "deleteArticleTag",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/articles/{id}/like": {
+            "get": {
+                "tags": [
+                    "Articles"
+                ],
+                "summary": "Get likes counter of articles",
+                "description": "Get how many likes the articles have",
+                "operationId": "getArticlesLikes",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Articles"
+                ],
+                "summary": "increment likes counter of articles",
+                "description": "increases the count when someone likes an article",
+                "operationId": "saveArticlesLikes",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/articles/{id}/view": {
+            "get": {
+                "tags": [
+                    "Articles"
+                ],
+                "summary": "Get view counter of articles",
+                "description": "Get how many views the articles have",
+                "operationId": "getArticlesViews",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Articles"
+                ],
+                "summary": "increment view counter of articles",
+                "description": "increases the count when someone views an article",
+                "operationId": "saveArticlesViews",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Articles",
+            "description": "API Endpoints of Articles. Postman Url is https://www.getpostman.com/collections/4382c3395a389aa1ebd9"
+        }
+    ]
+}

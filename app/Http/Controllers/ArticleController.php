@@ -14,6 +14,20 @@ class ArticleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    /**
+     * @OA\Get(
+     *      path="/articles",
+     *      operationId="getArticlesList",
+     *      tags={"Articles"},
+     *      summary="Get list of articles",
+     *      description="Returns list of articles",
+     *      @OA\Response(
+     *          response=200,
+     *          description="Successful operation",
+     *       )
+     *     )
+     */
     public function index()
     {
         // returns all articles
@@ -37,6 +51,20 @@ class ArticleController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+    /**
+     * @OA\Post(
+     *      path="/articles",
+     *      operationId="postArticle",
+     *      tags={"Articles"},
+     *      summary="post an article",
+     *      description="post an article",
+     *      @OA\Response(
+     *          response=200,
+     *          description="Successful operation",
+     *       )
+     *     )
+     */
     public function store(ArticleRequest $request)
     {
         // creates artcles
@@ -50,6 +78,20 @@ class ArticleController extends Controller
      *
      * @param  \App\Models\Article  $article
      * @return \Illuminate\Http\Response
+     */
+
+    /**
+     * @OA\Get(
+     *      path="/articles/{id}",
+     *      operationId="getoneArticle",
+     *      tags={"Articles"},
+     *      summary="get an article",
+     *      description="get an article",
+     *      @OA\Response(
+     *          response=200,
+     *          description="Successful operation",
+     *       )
+     *     )
      */
     public function show($id)
     {
@@ -80,6 +122,20 @@ class ArticleController extends Controller
      * @param  \App\Models\Article  $article
      * @return \Illuminate\Http\Response
      */
+
+    /**
+     * @OA\Put(
+     *      path="/articles/{id}",
+     *      operationId="updateArticle",
+     *      tags={"Articles"},
+     *      summary="update an article",
+     *      description="update an article",
+     *      @OA\Response(
+     *          response=200,
+     *          description="Successful operation",
+     *       )
+     *     )
+     */
     public function update(Request $request, $id)
     {
         // update articles
@@ -98,6 +154,20 @@ class ArticleController extends Controller
      *
      * @param  \App\Models\Article  $article
      * @return \Illuminate\Http\Response
+     */
+
+    /**
+     * @OA\Delete(
+     *      path="/articles/{id}",
+     *      operationId="deleteArticle",
+     *      tags={"Articles"},
+     *      summary="delete an article",
+     *      description="delete an article",
+     *      @OA\Response(
+     *          response=200,
+     *          description="Successful operation",
+     *       )
+     *     )
      */
     public function destroy($id)
     {

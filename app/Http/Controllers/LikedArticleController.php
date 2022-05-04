@@ -8,6 +8,20 @@ use App\Http\Resources\Resource as ArticleResource;
 
 class LikedArticleController extends Controller
 {
+
+    /**
+     * @OA\Get(
+     *      path="/articles/{id}/like",
+     *      operationId="getArticlesLikes",
+     *      tags={"Articles"},
+     *      summary="Get likes counter of articles",
+     *      description="Get how many likes the articles have",
+     *      @OA\Response(
+     *          response=200,
+     *          description="Successful operation",
+     *       )
+     *     )
+     */
     public function getArticleLikes($id){
         $article = LikedArticle::where('article_id', $id)->first();
         if ($article) {
@@ -17,6 +31,19 @@ class LikedArticleController extends Controller
         }
     }
 
+    /**
+     * @OA\Post(
+     *      path="/articles/{id}/like",
+     *      operationId="saveArticlesLikes",
+     *      tags={"Articles"},
+     *      summary="increment likes counter of articles",
+     *      description="increases the count when someone likes an article",
+     *      @OA\Response(
+     *          response=200,
+     *          description="Successful operation",
+     *       )
+     *     )
+     */
     public function saveArticleLike($id){
         // find article
         $article = LikedArticle::where('article_id', $id)->first();
