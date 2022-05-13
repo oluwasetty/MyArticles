@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\SoftDeletes; // for soft deletes
 class Article extends Model
 {
     use HasFactory;
-    use SoftDeletes; //add this line
+    use SoftDeletes; //add this lines
  
     public $fillable = [ 'title', 'short_description', 'full_text', 'thumbnail_path', 'image_path' ];
  
